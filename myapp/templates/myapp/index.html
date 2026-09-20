@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+
+{% block body %}
+
+
+<h1>This the index</h1>
+
+{% for product in products %}
+<img src="{{product.image.url}}"/>
+<p>{{ product.name }}</p>
+<p>{{ product.price }}</p>
+<p>{{ product.description }}</p>
+
+
+
+
+{% endfor %}
+
+{% endblock %}
+
+
