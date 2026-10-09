@@ -9,3 +9,9 @@ def index(request):
         "products":products
     }
     return render(request,'myapp/index.html',context)
+def details(request,slug):
+    product = Product.objects.get(slug=slug)
+    context = {
+        "product":product
+    }
+    return render(request,'myapp/details.html',context)

@@ -1,0 +1,50 @@
+{%extends 'myapp/base.html' %}
+
+{% block body %}
+
+<div>
+    <div>
+        <img class="w-80 h-80" src="{{product.image.url}}"/>
+    </div>
+    <div>
+        <h1>{{ product.name }}</h1>
+        <div>★★★★☆ (12,338)</div>
+        <p>{{ product.price }}</p>
+        <p>Inclusive of all taxes</p>
+        <ul>
+            <li>{{ product.description }}</li>
+        </ul>
+
+    </div>
+
+    <div>
+        <p>{{ product.price }}</p>
+        <div>
+            <select name="" id="">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+            </select>
+        </div>
+        <p>Free delivery by tomorrow</p>
+        {% if product.stock %}
+        <p>In stock</p>
+        {% else %}
+        <p>Out of stock</p>
+        {% endif %}
+        <button>Add to Cart</button>
+        <button>Buy Now</button>
+        <p>
+            sold by:Abc Company Pvt Ltd
+
+        </p>
+        
+    </div>
+
+
+
+</div>
+
+{% endblock %}
